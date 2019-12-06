@@ -1,0 +1,30 @@
+<h1 style="text-align: center; background-color: azure;text-shadow: 1in;">Reactive Form </h1>
+<form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+    {{LoginForm.value|json}}
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email"
+            [class.is-invalid]="email.invalid && email.touched">
+        <div *ngIf="email.invalid && email.touched">
+            <small *ngIf="email.errors?.required" class="alert-danger">Name is required</small>
+
+            <small *ngIf="email.errors?.minlength" class="alert-danger">Name should be >3</small>
+            <small></small>
+        </div>
+    </div>
+       
+
+
+        <div class="form-group">
+
+            <label>password</label>
+            <input type="password" class="form-control" formControlName="userPassword">
+        </div>
+
+        <div class="form-group">
+
+            
+            <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+</form>
