@@ -12,6 +12,10 @@ const adminRoutes: Routes = [
    {
     path: 'raisePO',
     component: RaisePOComponent,
+   },
+   {
+     path: 'viewAll',
+     component: ViewAllComponent
    }
 ];
 

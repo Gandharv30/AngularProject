@@ -29,4 +29,4 @@ const routes: Routes = [//{path:'',component:HeaderComponent},
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[HeaderComponent,FooterComponent,BannerComponent,ViewAllComponent];
+export const routingComponents=[HeaderComponent,FooterComponent,BannerComponent];
