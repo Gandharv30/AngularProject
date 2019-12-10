@@ -1,0 +1,19 @@
+<p>View All Products</p>
+<div style="text-align: center; margin-left: 25%; "> 
+<table> 
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+    </tr>
+    <tr *ngFor="let prodObj of prodArr">
+        <td>{{prodObj.productId}}</td>
+        <td>{{productName}}</td>
+        <td>{{prodObj.productPrice}}</td>
+
+    </tr>
+
+
+
+</table>
+</div>

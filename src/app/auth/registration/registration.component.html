@@ -5,7 +5,7 @@
     <div class="form-group">
         <label>UserName:</label>
         <input type="text" class="form-control" formControlName="userName"
-            [class.is-invalid]="userName.invalid && userName.touched">
+            [class.is-invalid]="userName.invalid && userName.touched" >
         <div *ngIf=" userName.invalid && userName.touched">
             <small *ngIf="userName.errors?.required" class="alert-danger">Name is required</small>
 

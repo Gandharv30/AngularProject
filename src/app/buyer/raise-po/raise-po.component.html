@@ -1,0 +1,11 @@
+<h1 style="text-align: center; ">RAISE PO</h1>
+<div class="form-group">
+<label>
+Select:
+</label>
+<select class="form-control name" name="items">
+
+    <option value="">Select products</option>
+    <option *ngFor="let productObj of prodArr">{{productObj.productName}}</option>
+</select>
+</div>

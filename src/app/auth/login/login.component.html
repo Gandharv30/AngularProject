@@ -1,11 +1,12 @@
-<h1 style="text-align: center; background-color: azure;text-shadow: 1in;">Reactive Form </h1>
+<h1 style="text-decoration-color: aquamarine ; font-style: italic; font-family: 'Times New Roman', Times, serif; text-align: center;">Login Form </h1>
 <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
-    {{LoginForm.value|json}}
+   
 
     <div class="form-group">
+            {{LoginForm.value|json}}
         <label>Email</label>
         <input type="text" class="form-control" formControlName="email"
-            [class.is-invalid]="email.invalid && email.touched">
+            [class.is-invalid]="email.invalid && email.touched" placeholder="Enter your Email">
         <div *ngIf="email.invalid && email.touched">
             <small *ngIf="email.errors?.required" class="alert-danger">Name is required</small>
 
@@ -19,7 +20,7 @@
         <div class="form-group">
 
             <label>password</label>
-            <input type="password" class="form-control" formControlName="userPassword">
+            <input type="password" class="form-control" formControlName="userPassword" placeholder="Enter your Password">
         </div>
 
         <div class="form-group">

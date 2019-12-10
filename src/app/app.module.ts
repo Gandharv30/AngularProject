@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+import { BuyerModule } from './buyer/buyer.module';
 
 
 
@@ -20,13 +22,16 @@ import { AuthModule } from './auth/auth.module';
     // BannerComponent,
     // FooterComponent,
     routingComponents,
-
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AuthModule,
+    HttpClientModule,BuyerModule,
     AppRoutingModule,
- 
-    AuthModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

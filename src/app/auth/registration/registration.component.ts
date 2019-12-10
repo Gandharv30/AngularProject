@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Validators,FormBuilder} from '@angular/forms'
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-registration',
@@ -8,7 +9,7 @@ import {Validators,FormBuilder} from '@angular/forms'
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private userService:UserService) { }
 
   ngOnInit() {
   }
@@ -38,8 +39,11 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("helooooo");
+    console.log("hellooooo");
     console.log(this.registrationForm.value);
+    this.userService.addUser(this.registrationForm.value).subscribe(data=>{
+      console.log(data);
+    });
   }
 
 }
