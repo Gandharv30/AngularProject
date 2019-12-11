@@ -8,7 +8,7 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 
 
-import {FormsModule,ReactiveFormsModule} from '@angular/forms'
+// import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyerModule } from './buyer/buyer.module';
@@ -25,8 +25,8 @@ import { BuyerModule } from './buyer/buyer.module';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    FormsModule,
+ 
+    
     AuthModule,
     HttpClientModule,BuyerModule,
     AppRoutingModule,

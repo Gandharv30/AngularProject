@@ -22,11 +22,13 @@ private validateUrl:string;
   validate(loginEmail,loginPassword):Observable<any>{
     console.log(loginEmail,loginPassword);
     return this.http.post<any>("http://localhost:8085/PurchaseOrder_FrontEnd/loginFormSubmitController?email="+loginEmail+"&&userPassword="+loginPassword,
-    null,{responseType:'text' as 'json'});
+    null);
   }
 
   addUser(userObj:any):Observable<any>{
     console.log(userObj);
-    return this.http.post<any>(this.addUrl,userObj,{responseType:'text'as 'json'});  //url to be changed
+    return this.http.post<any>("http://localhost:8085/PurchaseOrder_FrontEnd/register/",userObj,{responseType:'text'as 'json'});  //url to be changed
   }
+  
+  
 }

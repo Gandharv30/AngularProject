@@ -1,27 +1,7 @@
 
 
-<!-- <nav class="navbar bg-light">
-    <a class="navbar-brand" routerLink="raisePo" >Raise Purchase Order</a>
-    <a class="navbar-brand" routerLink="viewAll" >View All</a>
-    <a class="navbar-brand" routerLink="register" routerLinkActive="active">Register</a>
-</nav>
+     <nav class="navbar bg-dark">
     
-    
-    
-    <ul>
-   
-        <a routerLink="raisePo">Raise PO</a>
-
-    </ul> -->
-<!-- <a href="raisePo ">link</a> -->
-
-<!-- <nav>
-        <a [routerLink]="['/raisePO']" routerLinkActive="active">Crisis Center</a>
-        <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-      </nav> -->
-     
-     
-     
       <ul>
           <li>
                 <a [routerLink]="['/raisePO']" routerLinkActive="active">Raise PO</a>
@@ -30,4 +10,20 @@
           <li>
                 <a [routerLink]="['/viewAll']" routerLinkActive="active">View All</a>
           </li>
-      </ul>
+          <li>
+                <a class= "navbar-brand" [routerLink]="['/login']" routerLinkActive="active" (click)="logout()">logout</a>
+
+          </li>
+      </ul> 
+</nav> 
+
+<!-- <div >
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+                <a [routerLink]="['/raisePO']" routerLinkActive="active">Raise PO</a>
+                <a [routerLink]="['/viewAll']" routerLinkActive="active">View All</a>
+                <a class= "navbar-brand" [routerLink]="['/login']" routerLinkActive="active" (click)="logout()">logout</a>
+            
+        </nav>
+        </div>
+    
+     -->

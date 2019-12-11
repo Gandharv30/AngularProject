@@ -35,20 +35,24 @@ export class LoginComponent implements OnInit {
     console.log(this.LoginForm.value);
   this.userService.validate(this.LoginForm.value.email,this.LoginForm.value.userPassword).subscribe(
     data=>{
-      alert("Welcome");
-      if(data == 'Seller'){
+      let userObj=data;
 
-        
+      sessionStorage.setItem("uObj",JSON.stringify("userObj"))
+      alert("Welcome");
+      
+      if(data.role == 'Seller'){
+
+ 
         console.log("Seller")
-        this.router.navigate(['./']);
+        this.router.navigate(['./sellerPage']);
         }
-        else if(data=='buyer'){
+        else if(data.role=='buyer'){
           console.log("buyer")
           this.router.navigate(['./buyerPage']);
         }
-        else if(data=='Vendor'){
+        else if(data.role=='Vendor'){
           console.log("vendor")
-          this.router.navigate(['./']);
+          this.router.navigate(['./vendorPage']);
         }
         else
         {

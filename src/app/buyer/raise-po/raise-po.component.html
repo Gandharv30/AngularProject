@@ -1,11 +1,52 @@
 <h1 style="text-align: center; ">RAISE PO</h1>
+<form>
 <div class="form-group">
 <label>
 Select:
 </label>
-<select class="form-control name" name="items">
+<select class="form-control"   [(ngModel)]="pro" name="pro">
 
-    <option value="">Select products</option>
-    <option *ngFor="let productObj of prodArr">{{productObj.productName}}</option>
+    <option value="0">Select products</option>
+    <option *ngFor="let productObj of prodArr" [value]="productObj.productId">{{productObj.productName}}</option>
 </select>
 </div>
+
+<br/>
+<div class="form-group">
+<label>Select Quantity :</label>
+ <input type="number"  class="form-control" name="quantity" placeholder="Quantity" id="quantity" [(ngModel)]="quantity">
+ </div><br/>
+ <div class="form-group">
+    <input type="button" value="Add" class="btn btn-dark add-row" (click)="onAdd()"/>
+    </div>
+</form>
+
+<h1>Products selected:s</h1>
+
+<table class="table-responsive table-dark table table-hover">
+    <thead>
+        <tr>
+            <th>Select</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let arr of productsArrToDisplay;let i=index">
+                    <th><input type="checkbox" name="record" [(ngModel)]="arr.isSelected"></th>
+                    <th>{{arr.productName}}</th>
+                    <th>{{arr.quantity}}</th>
+                </tr>
+    
+    </tbody>
+      </table>
+        <div class="row">
+        <div class="col">   
+        <button type="button" class="btn btn-dark" (click)="deleteRow()">Delete Row</button>
+        </div>      
+        <div class="col">
+            <input type="button" value="Raise PO" class="btn btn-dark" 
+            
+            id="purchaseOrder"/></div>
+    </div>
+    

@@ -9,17 +9,14 @@ import { BuyersPageComponent } from './buyer/buyers-page/buyers-page.component';
 import { ViewAllComponent } from './buyer/view-all/view-all.component';
 
 
-const routes: Routes = [//{path:'',component:HeaderComponent},
-//path:'',component:FooterComponent},
-//{path:'',component:BannerComponent},
-{path:'login',component:LoginComponent},
-{path:'register',component:RegistrationComponent},
-// {path:'buyerPage',component:BuyersPageComponent},
-//{path:'viewAll',component:ViewAllComponent},
-{
-  path: 'buyerPage',
-  loadChildren: './buyer/buyer.module#BuyerModule',
-}
+const routes: Routes = [
+  // {path:'', redirectTo:'/',pathMatch:'full'},
+  {path:'register',component:RegistrationComponent},
+  {path:'login',component:LoginComponent},
+  {
+    path: 'buyerPage',
+    loadChildren: './buyer/buyer.module#BuyerModule',
+  }
 
 
 ]; //path of component

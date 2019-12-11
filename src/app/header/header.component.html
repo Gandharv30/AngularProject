@@ -1,9 +1,43 @@
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Home</a>
-    <a class="navbar-brand" routerLink="login">Login</a>
-    <a class="navbar-brand" routerLink="register">Register</a>
-</nav>
+
+<div *ngIf="loggedUser==undefined && logValue">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+        <a class="navbar-brand" routerLink="#">Home</a>
+        <a class="navbar-brand" routerLink="login" >Login</a>
+        <a class="navbar-brand" routerLink="/register" >Register</a>
+        
+        </nav>
+</div> 
 
 
+
+<div class="container" *ngIf="logValue==true &&  loggedUser=='buyer'">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                
+                <a class="navbar-brand" routerLink="login">raise Po</a>
+                <a class="navbar-brand" routerLink="register">Logout</a>
+        </nav>
+
+</div>
+
+<div class="container" *ngIf="logValue==true &&  loggedUser=='seller'">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" routerLink="login">SendPo</a>
+
+        <a class="navbar-brand" routerLink="register">View Po</a>
+        <a class="navbar-brand" routerLink="login">Logout</a>
+        </nav>
+</div>
+
+
+
+<div class="container" *ngIf="logValue==true &&  loggedUser=='Vendor'">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" routerLink="login">View All Products</a>
+
+        <a class="navbar-brand" routerLink="register">View All Available Products</a>
+        <a class="navbar-brand" routerLink="login">Logout</a>
+        </nav>
+
+</div>
 
