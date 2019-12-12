@@ -2,43 +2,43 @@
 
 <h1>Welcome to Sellers Page</h1>
 
-<table>
-    <tr>
-        <th>
-    </tr>
-    <tr *ngFor="let poObj of poArray">
 
-<td>
-{{poObj.poId}}
-{{poObj.status}}
-{{poObj.year}}
-
-</td>
-
-    </tr>
-
-    </table>
-    <table class="table table-hover"> 
+    <table class="table table-hover table-danger"> 
             <thead class="thead-dark">
         <tr>
     
             <th>Purchase OrderId</th>
              <th>Purchase Order</th>
-           <th>Purchase Order Date</th> 
+           <th> </th>
         </tr>
         
     </thead>
         <tbody>
-        <tr *ngFor="let prodObj of prodArr">
+        <tr *ngFor="let poObj of poArray">
             <td>{{poObj.poId}}</td>
           <td>{{poObj.status}}</td>
-            <td>{{poObj.year}}</td>
+            <td (click)="viewPOItems(poObj.poId)" class="btn btn-dark">View Product Details</td>
     
         </tr>
     
     </tbody>
     
     </table>
+
+
+<table *ngIf="show" class="table table-hover table-info">
+    <tr>
+        <td>Product Id</td>
+        <td>Product Name</td>
+        <td>Quantity</td>
+    </tr>
+    <tr *ngFor="let item of itemArr">
+        <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productQuantity}}</td>
+    </tr>
+</table>
+
     
 
 

@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'sellerPage',
     loadChildren: './seller/seller.module#SellerModule',
+  },
+  {
+    path: 'vendorPage',
+    loadChildren: './vendor/vendor.module#VendorModule',
   }
 
 

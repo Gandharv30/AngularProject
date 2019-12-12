@@ -13,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyerModule } from './buyer/buyer.module';
 import { SellerModule } from './seller/seller.module';
+import { VendorModule } from './vendor/vendor.module';
 
 
 
@@ -30,6 +31,7 @@ import { SellerModule } from './seller/seller.module';
      AuthModule,
     HttpClientModule,BuyerModule,
     AppRoutingModule,
+    VendorModule 
     
     
   ],

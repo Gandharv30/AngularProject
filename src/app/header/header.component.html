@@ -2,12 +2,14 @@
 
 <!-- <div *ngIf="loggedUser==undefined && logValue"> -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
-        <a class="navbar-brand" routerLink="/">Home</a>
+        <a class="navbar-brand" routerLink="/" *ngIf="router.url==='/login' || router.url==='/register'">Home</a>
         <a class="navbar-brand" routerLink="/login"  *ngIf="router.url==='/' "> Login</a>
         <a class="navbar-brand" routerLink="/register " *ngIf="router.url==='/' || router.url==='/login'" >Register</a>
         <a  class="navbar-brand" routerLink="/raisePO" *ngIf="router.url==='/buyerPage' || router.url==='/raisePO'">raise Po</a>
-        <a routerLink="/viewAllPo" routerLinkActive="active" *ngIf="router.url==='/sellerPage' || router.url==='/viewAllPo'">viewAllPo</a>
-        <a class="navbar-brand" routerLink="/" *ngIf="router.url==='/buyerPage' || router.url==='/raisePO'">Logout</a>
+        <a routerLink="/viewAllPo" routerLink="/viewAllPo" *ngIf="router.url==='/sellerPage' || router.url==='/viewAllPo'">View All Pos</a>
+        <a class="navbar-brand" routerLink="/" *ngIf="router.url==='/buyerPage' || router.url==='/raisePO' || router.url==='/sellerPage' || router.url==='/viewAllPo' || router.url==='/vendorPage'">Logout</a>
+        <a class="navbar-brand" routerLink="/addProduct " *ngIf="  router.url==='/vendorPage'" >Add Product</a>
+        <a class="navbar-brand" routerLink="/viewAll " *ngIf="  router.url==='/vendorPage'" >View All Product</a>
         </nav>
 
         <!--sellers Page-->
