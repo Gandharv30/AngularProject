@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyerModule } from './buyer/buyer.module';
+import { SellerModule } from './seller/seller.module';
 
 
 
@@ -25,9 +26,8 @@ import { BuyerModule } from './buyer/buyer.module';
   ],
   imports: [
     BrowserModule,
- 
-    
-    AuthModule,
+    SellerModule,
+     AuthModule,
     HttpClientModule,BuyerModule,
     AppRoutingModule,
     

@@ -54,10 +54,13 @@ export class RaisePOComponent //implements OnInit
     // console.log(sessionStorage.getItem("uObj"));
      let obj=JSON.parse(sessionStorage.getItem("uObj"));  
      let uId=obj.userId;
+     console.log(obj);
+     console.log(uId);
      console.log( this.productsArrToDisplay+" "+uId);
      this.buyerService.raisePoForm(this.productsArrToDisplay,uId).
+ 
      subscribe(data => console.log("Value Added" +this.productsArrToDisplay));
-     window.location.reload(true);
+     //window.location.reload(true);
    }
 }
 

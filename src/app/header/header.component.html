@@ -1,26 +1,19 @@
 
 
-<div *ngIf="loggedUser==undefined && logValue">
+<!-- <div *ngIf="loggedUser==undefined && logValue"> -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
-        <a class="navbar-brand" routerLink="#">Home</a>
-        <a class="navbar-brand" routerLink="login" >Login</a>
-        <a class="navbar-brand" routerLink="/register" >Register</a>
-        
-        </nav>
-</div> 
-
-
-
-<div class="container" *ngIf="logValue==true &&  loggedUser=='buyer'">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                
-                <a class="navbar-brand" routerLink="login">raise Po</a>
-                <a class="navbar-brand" routerLink="register">Logout</a>
+        <a class="navbar-brand" routerLink="/">Home</a>
+        <a class="navbar-brand" routerLink="/login"  *ngIf="router.url==='/' "> Login</a>
+        <a class="navbar-brand" routerLink="/register " *ngIf="router.url==='/' || router.url==='/login'" >Register</a>
+        <a  class="navbar-brand" routerLink="/raisePO" *ngIf="router.url==='/buyerPage' || router.url==='/raisePO'">raise Po</a>
+        <a routerLink="/viewAllPo" routerLinkActive="active" *ngIf="router.url==='/sellerPage' || router.url==='/viewAllPo'">viewAllPo</a>
+        <a class="navbar-brand" routerLink="/" *ngIf="router.url==='/buyerPage' || router.url==='/raisePO'">Logout</a>
         </nav>
 
-</div>
+        <!--sellers Page-->
+<!-- </div> -->
 
-<div class="container" *ngIf="logValue==true &&  loggedUser=='seller'">
+<!-- <div class="container" *ngIf="logValue==true &&  loggedUser=='seller'">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" routerLink="login">SendPo</a>
 
@@ -29,8 +22,7 @@
         </nav>
 </div>
 
-
-
+  
 <div class="container" *ngIf="logValue==true &&  loggedUser=='Vendor'">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" routerLink="login">View All Products</a>
@@ -40,4 +32,4 @@
         </nav>
 
 </div>
-
+ -->

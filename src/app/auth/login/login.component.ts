@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
   this.userService.validate(this.LoginForm.value.email,this.LoginForm.value.userPassword).subscribe(
     data=>{
       let userObj=data;
-
-      sessionStorage.setItem("uObj",JSON.stringify("userObj"))
+      console.log(userObj);
+      sessionStorage.setItem("uObj",JSON.stringify(userObj))
       alert("Welcome");
       
       if(data.role == 'Seller'){

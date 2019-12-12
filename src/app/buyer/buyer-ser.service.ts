@@ -20,6 +20,7 @@ export class BuyerSerService {
 
   raisePoForm(poArr:any,uId:number)
   {
+    console.log(uId);
     return this.http.post<any>("http://localhost:8085/PurchaseOrder_FrontEnd/purchaseOrder/"+uId,poArr);
   }
   
