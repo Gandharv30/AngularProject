@@ -9,7 +9,7 @@ import { Product } from '../Product';
 export class VendorService {
   constructor(private http:HttpClient) { }
   
-  url="http://localhost:8085/PurchaseOrder_FrontEnd/iewProducts";
+  url="http://localhost:8085/PurchaseOrder_FrontEnd/viewAll";
 
   getAllProducts():Observable<Product[]> {
     return this.http.get<Product[]>(this.url);
@@ -17,7 +17,7 @@ export class VendorService {
 
 
   addQuantity(productId:number,quantity:number,vendorId:number):Observable<any>{
-    return this.http.get<any>("http://localhost:8085/PurchaseOrder_FrontEnd/"+'updateProductQuantity?productId='+productId
+    return this.http.post<any>("http://localhost:8085/PurchaseOrder_FrontEnd/"+'updateProductQuantity?pId='+productId
     +"&&quantity="+quantity+"&&vendorId="+vendorId,{responseType:'text' as 'json'});
   }
 

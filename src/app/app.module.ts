@@ -16,14 +16,13 @@ import { SellerModule } from './seller/seller.module';
 import { VendorModule } from './vendor/vendor.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     // HeaderComponent,
     // BannerComponent,
     // FooterComponent,
-    routingComponents,
+    routingComponents
   ],
   imports: [
     BrowserModule,

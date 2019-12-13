@@ -6,8 +6,6 @@ import { BannerComponent } from './banner/banner.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import { BuyersPageComponent } from './buyer/buyers-page/buyers-page.component';
-import { ViewAllComponent } from './buyer/view-all/view-all.component';
-
 
 const routes: Routes = [
   // {path:'', redirectTo:'/',pathMatch:'full'},

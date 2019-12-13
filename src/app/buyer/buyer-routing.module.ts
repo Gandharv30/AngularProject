@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RaisePOComponent } from './raise-po/raise-po.component';
 import { BuyersPageComponent } from './buyers-page/buyers-page.component';
-import { ViewAllComponent } from './view-all/view-all.component';
 
 
 const adminRoutes: Routes = [
@@ -13,10 +12,6 @@ const adminRoutes: Routes = [
    {
     path: 'raisePO',
     component: RaisePOComponent,
-   },
-   {
-     path: 'viewAll',
-     component: ViewAllComponent
    }
 ];
 

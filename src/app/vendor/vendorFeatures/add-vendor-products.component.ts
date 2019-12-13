@@ -25,7 +25,7 @@ export class AddVendorProductsComponent implements OnInit {
   }
 
   addQuantity(){
-    let uObj=JSON.parse(sessionStorage.getItem("userObj"));
+    let uObj=JSON.parse(sessionStorage.getItem("uObj"));
     let vendorId=uObj.userId;
 
     console.log('Vendor Id : '+vendorId);

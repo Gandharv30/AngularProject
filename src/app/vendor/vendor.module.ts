@@ -10,7 +10,9 @@ import { VendorRoutingModule } from './vendor-routing.module';
 
 
 @NgModule({
-  declarations: [VendorsPageComponent, AllProductsComponent, VendorProductsComponent, AddVendorProductsComponent],
+  declarations: [VendorsPageComponent, AllProductsComponent, VendorProductsComponent, AddVendorProductsComponent,
+  
+  ],
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule,VendorRoutingModule
   ]
